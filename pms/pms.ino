@@ -4,7 +4,7 @@
 RTC_DS3231 rtc;
 
 char buf[256];
-bool need_print_time = true;
+bool need_print_time = false;
 #define DBG(x, ...) ({ \
   if (need_print_time) \
     print_time(); \
@@ -196,7 +196,6 @@ int get_history_avg()
   {
     for (i = 0; i < history_count; i++)
     {
-      
       total += history_value[i];
     }
     return divide(total, history_count);
@@ -461,3 +460,4 @@ void loop()
     p++;
   }
 }
+
