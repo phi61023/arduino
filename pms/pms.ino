@@ -4,7 +4,7 @@
 RTC_DS3231 rtc;
 
 char buf[256];
-bool need_print_time = false;
+bool need_print_time = true;
 #define DBG(x, ...) ({ \
   if (need_print_time) \
     print_time(); \
@@ -460,4 +460,3 @@ void loop()
     p++;
   }
 }
-
